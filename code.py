@@ -81,11 +81,11 @@ if __name__ == "__main__":
 
         # Get Images
         Images = []
-        img = getPart(File, "img src=\"", "\"")
+        img = getPart(File, "imgsrc=\"", "\"")
         while img:
             Images.append(img)
             File = File.replace(img, "")
-            img = getPart(File, "img src=\"", "\"")
+            img = getPart(File, "imgsrc=\"", "\"")
         Images = set(Images)
         D["imgs"] = Images # Images of the file
 
